@@ -6,6 +6,8 @@ Completed user stories:
  * Optional: Change the background of the application
  * Optional: If user kills the app and launches it with in 1 minutes the old data is shown, After 1 minutes values are cleared.
  * optional: user can set tip values as per his own choice.
+
+
 Notes:
 Used auto layout to make application work on different resolution platforms.
 
