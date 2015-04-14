@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6249" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="dZR-Mk-xvi">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6243"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--Settings View Controller-->
+        <scene sceneID="1LO-vi-fgi">
+            <objects>
+                <viewController id="BDf-Rz-XY5" customClass="SettingsViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="A3A-XY-ev2"/>
+                        <viewControllerLayoutGuide type="bottom" id="Fgn-7R-pRr"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="QBg-DV-EM7">
+                        <rect key="frame" x="0.0" y="0.0" width="400" height="400"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Selected Tip" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zfB-c3-9QQ">
+                                <rect key="frame" x="16" y="93" width="109" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Other Values" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e5h-eu-fIM">
+                                <rect key="frame" x="16" y="138" width="109" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" tag="1002" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qCN-du-a1j">
+                                <rect key="frame" x="132" y="134" width="60" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" tag="1001" contentMode="scaleToFill" fixedFrame="YES" highlighted="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TlM-yy-2P3">
+                                <rect key="frame" x="132" y="89" width="60" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" tag="1003" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0ii-WU-vVZ">
+                                <rect key="frame" x="209" y="134" width="60" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="Soo-z6-9o5" appends="YES" id="KOO-iK-LhX"/>
+                        </connections>
+                    </view>
+                    <connections>
+                        <outlet property="defaultTextField" destination="TlM-yy-2P3" id="unx-ln-Aob"/>
+                        <outlet property="maximumTextField" destination="0ii-WU-vVZ" id="Ami-k0-jw0"/>
+                        <outlet property="minimumTextField" destination="qCN-du-a1j" id="VHh-BX-Pjx"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="C0G-t3-OXl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="Soo-z6-9o5">
+                    <connections>
+                        <action selector="onTap:" destination="BDf-Rz-XY5" id="LYg-qd-XcJ"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="589" y="417"/>
+        </scene>
+        <!--Tip View Controller-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="TipViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
+                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="400" height="400"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="$" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CG0-l0-Rtx">
+                                <rect key="frame" x="8" y="80" width="380" height="75"/>
+                                <color key="tintColor" red="0.3021923789" green="0.39283744450000002" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SBj-mP-0mh">
+                                <rect key="frame" x="6" y="168" width="80" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="$" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="L8g-cJ-U8j">
+                                <rect key="frame" x="86" y="168" width="302" height="30"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" none="YES" notEnabled="YES"/>
+                                </accessibility>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="$" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rme-d0-6rk">
+                                <rect key="frame" x="8" y="206" width="380" height="75"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" none="YES" notEnabled="YES"/>
+                                </accessibility>
+                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="aIF-yd-oxU">
+                                <rect key="frame" x="5" y="290" width="390" height="29"/>
+                                <segments>
+                                    <segment title="10%"/>
+                                    <segment title="15%"/>
+                                    <segment title="20%"/>
+                                </segments>
+                            </segmentedControl>
+                        </subviews>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="aIF-yd-oxU" secondAttribute="trailing" id="8De-4g-3Eg"/>
+                            <constraint firstItem="SBj-mP-0mh" firstAttribute="top" secondItem="CG0-l0-Rtx" secondAttribute="bottom" constant="16" id="Lih-Oa-wGA"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="L8g-cJ-U8j" secondAttribute="trailing" id="O4i-vW-xdS"/>
+                            <constraint firstItem="rme-d0-6rk" firstAttribute="top" secondItem="L8g-cJ-U8j" secondAttribute="bottom" constant="16" id="RMt-Hk-d43"/>
+                            <constraint firstItem="CG0-l0-Rtx" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="Vle-hR-gf4"/>
+                            <constraint firstItem="L8g-cJ-U8j" firstAttribute="top" secondItem="CG0-l0-Rtx" secondAttribute="bottom" constant="16" id="XMj-yB-EI7"/>
+                            <constraint firstItem="rme-d0-6rk" firstAttribute="top" secondItem="SBj-mP-0mh" secondAttribute="bottom" constant="16" id="Yq9-0V-b7D"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="rme-d0-6rk" secondAttribute="trailing" id="ZRQ-Om-mcc"/>
+                            <constraint firstItem="aIF-yd-oxU" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="chk-VL-KBk"/>
+                            <constraint firstItem="aIF-yd-oxU" firstAttribute="top" secondItem="rme-d0-6rk" secondAttribute="bottom" constant="16" id="jUW-6s-ZET"/>
+                            <constraint firstItem="rme-d0-6rk" firstAttribute="top" secondItem="L8g-cJ-U8j" secondAttribute="bottom" constant="16" id="oCI-ch-A6q"/>
+                            <constraint firstItem="SBj-mP-0mh" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="pTR-a4-IAJ"/>
+                            <constraint firstItem="aIF-yd-oxU" firstAttribute="top" secondItem="rme-d0-6rk" secondAttribute="bottom" constant="16" id="u54-pr-ZS2"/>
+                            <constraint firstItem="rme-d0-6rk" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="vyH-K7-0L1"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="CG0-l0-Rtx" secondAttribute="trailing" id="w6f-p4-MWu"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="L8g-cJ-U8j" secondAttribute="trailing" id="zzL-Oa-xtF"/>
+                        </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="N6G-4w-0rb" appends="YES" id="yfU-zR-XyT"/>
+                        </connections>
+                    </view>
+                    <navigationItem key="navigationItem" id="FeS-AY-ZCQ">
+                        <barButtonItem key="rightBarButtonItem" title="Settings" id="Xwb-5c-i2O">
+                            <connections>
+                                <segue destination="BDf-Rz-XY5" kind="show" id="mqu-Kg-YV2"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="400" height="400"/>
+                    <connections>
+                        <outlet property="billTextField" destination="CG0-l0-Rtx" id="xKp-rQ-ocE"/>
+                        <outlet property="tipAmountLabel" destination="L8g-cJ-U8j" id="KfD-af-R2S"/>
+                        <outlet property="tipIconLabel" destination="SBj-mP-0mh" id="pBX-SA-63g"/>
+                        <outlet property="tipSelectionControl" destination="aIF-yd-oxU" id="1ZZ-dz-3ed"/>
+                        <outlet property="totalAmountLabel" destination="rme-d0-6rk" id="OuQ-Po-omH"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="N6G-4w-0rb">
+                    <connections>
+                        <action selector="onTap:" destination="vXZ-lx-hvc" id="4Pd-qN-IAa"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="1117" y="335"/>
+        </scene>
+        <!--Tip Calculator-->
+        <scene sceneID="srI-pF-2id">
+            <objects>
+                <navigationController title="Tip Calculator" automaticallyAdjustsScrollViewInsets="NO" id="dZR-Mk-xvi" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="0Be-1Q-Hrf">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.92941182850000004" green="0.92941182850000004" blue="0.92941182850000004" alpha="1" colorSpace="deviceRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" red="0.30333960241822783" green="0.37045516268525158" blue="0.47450980390000003" alpha="1" colorSpace="calibratedRGB"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="vXZ-lx-hvc" kind="relationship" relationship="rootViewController" id="Mvx-Ex-2VN"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ewv-m1-cQe" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="293" y="-358"/>
+        </scene>
+    </scenes>
+    <color key="tintColor" red="0.30219237890344774" green="0.39283744454189629" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+</document>
